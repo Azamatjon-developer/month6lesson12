@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "Kumbh";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./assets/fonts/Kumbh_Sans/static/KumbhSans-Regular.ttf");
+    
+}
+
+@font-face {
+    font-family: "Kumbh";
+    font-style: normal;
+    font-weight: 500;
+    src: url("./assets/fonts/Kumbh_Sans/static/KumbhSans-Medium.ttf");
+
+}
+
+
+@font-face {
+    font-family: "Kumbh";
+    font-style: normal;
+    font-weight: 600;
+    src: url("./assets/fonts/Kumbh_Sans/static/KumbhSans-SemiBold.ttf");
+
+}
+@font-face {
+    font-family: "Kumbh";
+    font-style: normal;
+    font-weight: 700;
+    src: url("./assets/fonts/Kumbh_Sans/static/KumbhSans-Bold.ttf") !important;
+
+}
+@font-face {
+    font-family: "Kumbh";
+    font-style: normal;
+    font-weight: 800;
+    src: url("./assets/fonts/Kumbh_Sans/static/KumbhSans-ExtraBold.ttf");
+
+}
+
+
