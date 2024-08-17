@@ -9,7 +9,7 @@ function Header() {
   }
 
   return (
-    <div className='flex items-center w-[1000px] justify-end absolute right-[30px] py-[20px]  bg-white z-50' > 
+    <div className='flex items-center w-[1000px] justify-end pr-[30px] py-[20px]  bg-white z-50' > 
        <div className="flex items-center gap-2"> <img src={Remind} alt="remind" />
        <button className='pt-[12px] pb-[12px] pr-[35px] pl-[35px] border-[0.1px] font-kumbh font-semibold text-[14px] border-slate-500' >Log out</button></div>
     </div>

@@ -1,5 +1,4 @@
 import React from 'react'
-import Logo from '../assets/images/logo.svg'
 import Home from '../assets/images/home.svg'
 import Study from '../assets/images/Study.svg'
 import BiLlingImage from '../assets/images/Billing.svg'
@@ -8,14 +7,14 @@ import ExamsImg from '../assets/images/Exams.svg'
 import FeaturesImg from '../assets/images/Features.svg'
 import { NavLink } from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
+import { LogoIcon } from '../assets/images/Icons'
 function Saidbar() {
   return (
-    <div className="w-[20%] h-screen overflow-y-auto   bg-[#152259] ">
+    <div className="w-[20%]    bg-[#152259] ">
       <div className="w-[100%]   text-[white]">
-        <div className="mt-[26px] flex flex-col items-center ">
-          <img src={Logo} alt="LogoImage" width={65} height={65} />
-          <h2 className="mt-[12px] pb-[27px]">Udemy Inter. school</h2>
-          <hr className="w-full h-[3px]" />
+        <div className="mt-[26px] pb-[27px] ">
+          <span className='block w-[65px] mx-auto'><LogoIcon/></span>
+          <h2 className="mt-[12px] text-center">Udemy Inter. school</h2>
         </div>
         <div className="flex flex-col space-y-3 pt-[16px] pl-[30px]">
           <div className="flex items-center gap-[16px]">

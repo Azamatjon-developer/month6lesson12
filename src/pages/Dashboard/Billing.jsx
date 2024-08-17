@@ -4,7 +4,6 @@ import Saidbar from '../../components/Saidbar'
 function Billing() {
   return (
     <div>
-      <Saidbar/>
       <h2>Billing </h2>
     </div>
   )

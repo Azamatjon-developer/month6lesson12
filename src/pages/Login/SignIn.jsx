@@ -42,6 +42,7 @@ function SignIn(e) {
             placeholder="Enter your Login"
             type="text"
             name="login"
+            inputVal={onChange=(evt) => console.log(evt)}
             extraStyle="mb-[14px]"
           />
           <Input

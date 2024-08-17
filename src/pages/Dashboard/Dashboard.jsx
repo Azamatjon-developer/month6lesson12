@@ -12,9 +12,8 @@ function Dashboard() {
   const { pathname } = useParams()
 
   return (
-    <div className='flex'>
-      <Saidbar/>
-      <div className=' w-[80%] flex items-center justify-start flex-col  h-screen overflow-y-auto '>
+    <div className=''>
+      <div className=' flex items-center justify-start flex-col  h-screen overflow-y-auto '>
         <div className='pt-[100px] inline-block font-kumbh font-normal'>
           <h3>Learn  how to launch faster</h3>
           <p>watch our webinar for tips from our experts and get a limited time offer.</p>
