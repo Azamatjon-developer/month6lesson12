@@ -1,28 +1,28 @@
-import { Link, useNavigate } from 'react-router-dom'; // useParams olib tashlandi
-import { Input } from '../../components/Input';
-import React, { useEffect } from 'react';
-import Button from '../../components/Button';
+import { Link, useNavigate } from 'react-router-dom' // useParams olib tashlandi
+import { Input } from '../../components/Input'
+import React, { useEffect } from 'react'
+import Button from '../../components/Button'
 import { useContext } from 'react'
 import { Context } from '../../Context/Context'
 
 function SignUp() {
-  const navigate = useNavigate();
-  const {setToken} = useContext(Context)
+  const navigate = useNavigate()
+  const { setToken } = useContext(Context)
 
   const handleSubmitSignUp = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     const data = {
       login: e.target.login.value,
       password: e.target.password.value,
-    };
-
-    if (data.login == "Azamat" && data.password =="123") {
-      setToken(data); 
-      navigate("/");
-    } else {
-      alert("Login yoki password xato");
     }
-  };
+
+    if (data.login == 'Azamat' && data.password == '123') {
+      setToken(data)
+      navigate('/')
+    } else {
+      alert('Login yoki password xato')
+    }
+  }
 
   return (
     <div>
@@ -38,7 +38,8 @@ function SignUp() {
             isRequired={true}
             placeholder="Enter your Email"
             type="email"
-            name="email"  extraStyle="mb-[14px]"
+            name="email"
+            extraStyle="mb-[14px]"
           />
           <Input
             isRequired={true}
@@ -54,11 +55,11 @@ function SignUp() {
             name="password"
             extraStyle="mb-[14px]"
           />
-          <Button title={'Sign up'} type={'submit'} extraClass={'mb-[100px]'} /> {/* Button form ichiga qo'shildi */}
+          <Button title={'Sign up'} type={'submit'} extraClass={'mb-[100px] pt-[11px] pl-[95px] pr-[95px] pb-[11px] text-[14px] font-kumbh font-bold'} />{' '}
         </form>
       </div>
     </div>
-  );
+  )
 }
 
-export default SignUp;
+export default SignUp

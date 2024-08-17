@@ -7,8 +7,9 @@ import {
   Features,
   Settings,
   Students,
-  Teachers,
+  Teachers
 } from './pages/Dashboard'
+import InputForm from './pages/Dashboard/InputForm'
 
 import { Route, Routes } from 'react-router-dom'
 import { SignIn, SignUp } from './pages/Login'
@@ -18,7 +19,7 @@ import Header from './components/Header'
 function App() {
   const { token } = useContext(Context)
   return (
-    <>
+    <div className=''>
     <Header/>
       <Routes>
         <Route path="/" element={<Dashboard />} />
@@ -30,8 +31,9 @@ function App() {
         <Route path="/settings" element={<Settings />} />
         <Route path="/exams" element={<Exams />} />
         <Route path="/features" element={<Features />} />
+        <Route path='/inputform' element={<InputForm/>} />
       </Routes>
-    </>
+    </div>
   )
 }
 

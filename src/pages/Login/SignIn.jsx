@@ -52,7 +52,7 @@ function SignIn(e) {
             extraStyle="mb-[14px]"
           />
 
-          <Button title="Login" type="submit" />
+          <Button extraClass={"pt-[11px] pl-[100px] pr-[100px] pb-[11px] bg-[#2D88D4] rounded-[10px]"} title="Login" type="submit" />
         </form>
         <Link
           className="text-[#2D88D4] mt-[14px] text-center text-[16px] font-kumbh font-semibold"
