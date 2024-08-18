@@ -21,7 +21,7 @@ function SignIn(e) {
   }
 
   return (
-    <div>
+    <div className="-ml-[20%]">
       <div className="flex justify-center mt-[100px] text-[#4F4F4F] text-[36px] font-kumbh font-semibold text-center">
         <h2 className="font-kumbh font-semibold">
           Welcome, Log into your account
@@ -51,7 +51,7 @@ function SignIn(e) {
 
           <Button
             extraClass={
-              'pt-[13px]  pl-[101px] pr-[101px] pb-[13px] bg-[#2D88D4] rounded-[10px] font-kumbh font-semibold text-[16px] text-white'
+              'w-[235px] bg-[#2D88D4] rounded-[10px] font-kumbh font-semibold text-[16px] text-white'
             }
             title="Login"
             type="submit"

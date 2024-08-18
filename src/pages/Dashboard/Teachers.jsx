@@ -12,16 +12,16 @@ function Teachers() {
       <Link to={'/about-teachers'} element={<AboutTeachers />}>
         <td className="w-[180px] pt-[20px]">{teacher.FullName}</td>
       </Link>
-      <td className="w-[180px] h-[48px] pt-[20px] pl-[30px]">
+      <td className="w-[180px] h-[48px] pt-[20px] pl-[30px] border-[1px] border-slate-500">
         {teacher.Class}
       </td>
-      <td className="w-[180px] h-[48px] pt-[20px] pl-[30px]">
+      <td className="w-[180px] h-[48px] pt-3 pl-[30px]  border-[1px] border-slate-500 text-center pb-3">
         {teacher.Subject}
       </td>
-      <td className="w-[180px] h-[48px] pt-[20px] pl-[30px]">
+      <td className="w-[180px] h-[48px] pt-3 pl-[30px]  border-[1px] border-slate-500 text-center pb-3">
         {teacher.Email}
       </td>
-      <td className="w-[180px] h-[48px] pt-[20px] pl-[30px]">
+      <td className="w-[180px] h-[48px] pt-3 pl-[30px]  border-[1px] border-slate-500 text-center pb-3">
         {teacher.Gender}
       </td>
     </tr>
@@ -52,7 +52,7 @@ function Teachers() {
             </div>
             {TeachersData.length ? (
               <table className="">
-                <thead className="">
+                <thead className="border-[1px] border-slate-500">
                   <tr className="w-[180px] ">
                     <th className="w-[180px] border-[1px] border-slate-500 pt-[16px] pb-[16px]">
                       Name
@@ -73,7 +73,7 @@ function Teachers() {
                     </th>
                   </tr>
                 </thead>
-                <tbody>{TeachersMap}</tbody>
+                <tbody className='border-[1px] border-slate-500'>{TeachersMap}</tbody>
               </table>
             ) : (
               <img className="m-auto " src={NoTeachers} alt="NoTeachers" />

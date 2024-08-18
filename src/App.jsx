@@ -32,12 +32,18 @@ function App() {
     }
   }, [])
 
+
+  if(pathname == "/") {
+    
+  }
+
+
   return (
     <div className="flex">
       <div className={`flex  ${showsidebar ? 'hidden' : ''}`}>
         <Saidbar className={`w-[20%]`} />
       </div>
-      <div className={` ml-[20%] w-[80%] ${ showsidebar ? "w-full" : ""}`}>
+      <div className={` ml-[20%] w-[100%] ${ showsidebar ? "w-full" : ""}`}>
         <Header />
         <Routes>
           <Route path="/" element={<Dashboard />} />

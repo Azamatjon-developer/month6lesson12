@@ -25,15 +25,15 @@ function SignUp() {
   }
 
   return (
-    <div>
-      <div className="flex justify-center mt-[60px] text-[36px] text-[#4F4F4F] font-kumbh font-semibold">
+    <div className="-ml-[20%]">
+      <div className="flex justify-center mt-[60px] text-[36px] text-[#4F4F4F] font-kumbh font-semibold ">
         <h2 className="text-center">Welcome, Sign up</h2>
       </div>
       <div className="flex flex-col items-center">
         <p className="mt-[60px] text-[#667085] font-kumbh font-medium">
           It is our great pleasure to have you on board!
         </p>
-        <form onSubmit={handleSubmitSignUp} className="w-full max-w-[400px]">
+        <form onSubmit={handleSubmitSignUp} className="w-full max-w-[400px] border px-[20px]  py-[20px] rounded-md my-[40px]">
           <Input
             isRequired={true}
             placeholder="Enter your Email"

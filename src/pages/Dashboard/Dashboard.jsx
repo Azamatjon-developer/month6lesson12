@@ -15,16 +15,16 @@ function Dashboard() {
       <div className="flex items-center justify-start flex-col ">
         <div className="pt-[44px] font-kumbh font-normal">
           <h3>Learn how to launch faster</h3>
-          <p>
+          <p className='w-[536px] text-[#424242] font-kumbh font-medium pb-[68px] text-[16px]'>
             watch our webinar for tips from our experts and get a limited time
             offer.
           </p>
         </div>
         <div className="">
-          <h2 className="font-kumbh font-semibold text-[36px]">
+          <h2 className=" w-[776px] font-kumbh font-semibold text-[36px] mb-[23px]">
             Welcome to your dashboard, Udemy school
           </h2>
-          <p className="mt-[23px] ml-[40px]  font-kumbh font-semibold text-[24px]">
+          <p className=" ml-[40px]  font-kumbh font-semibold text-[24px]">
             Uyo/school/@teachable.com
           </p>
           <div className=" flex items-center gap-[25px] mt-[68px] ml-[40px] ">
@@ -34,7 +34,7 @@ function Dashboard() {
             </h3>
           </div>
           <div className="w-[464px] mt-[16px] ml-[100px]">
-            <p>
+            <p className='text-[#4F4F4F] text-[14px] font-kumbh font-normal'>
               Create rich course content and coaching products for your
               students. When you give them a pricing plan, they’ll appear on
               your site!
@@ -47,7 +47,7 @@ function Dashboard() {
             </h3>
           </div>
           <div className="w-[464px] mt-[16px] ml-[100px]">
-            <p>
+            <p className='text-[#4F4F4F] text-[14px] font-kumbh font-normal'>
               Create rich course content and coaching products for your
               students. When you give them a pricing plan, they’ll appear on
               your site!
@@ -60,7 +60,7 @@ function Dashboard() {
             </h3>
           </div>
           <div className="w-[464px] mt-[16px] ml-[100px] mb-[150px]">
-            <p>
+            <p className='text-[#4F4F4F] text-[14px] font-kumbh font-normal'>
               Create rich course content and coaching products for your
               students. When you give them a pricing plan, they’ll appear on
               your site!
