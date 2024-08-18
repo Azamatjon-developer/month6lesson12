@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from '../../components/Button'
 import SearchIcon from '../../assets/images/Search.svg'
 import NoTeachers from '../../assets/images/NoTeachers.png'
@@ -6,12 +6,16 @@ import { Link } from 'react-router-dom'
 import SupportBtn from '../../components/SupportBtn'
 import AboutTeachers from './AboutTeachers'
 function Teachers() {
+  const [searchTerm, setSearchTerm] = useState('')
   const TeachersData = JSON.parse(localStorage.getItem('teachers')) || []
-  const TeachersMap = TeachersData?.map((teacher, index) => (
-    <tr>
+  const TeachersMap = TeachersData.filter((teacher) =>
+    teacher.FullName.toLowerCase().includes(searchTerm.toLowerCase()) 
+  )?.map((teacher, index) => (
+    <tr key={index} className='w-[100%] border-[1px] border-slate-600 pt-3 text-center'>
       <Link to={'/about-teachers'} element={<AboutTeachers />}>
         <td className="w-[180px] ">{teacher.FullName}</td> 
       </Link>
+      
       <td className="w-[180px] h-[48px] text-center pb-3">
         {teacher.Class}
       </td>
@@ -47,6 +51,7 @@ function Teachers() {
               <input
                 className="w-[100%] pt-[16px] pb-[16px] pl-[48px] pr-[20px] outline-none "
                 type="text"
+                onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search for a student by name or email"
               />
             </div>

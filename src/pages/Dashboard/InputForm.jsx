@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Button from '../../components/Button'
 import { Input } from '../../components/Input'
 
 function InputForm() {
-  const AllData = []
   const [fullName, setFullName] = useState('')
   const [className, setClassName] = useState('')
   const [email, setEmail] = useState('')
@@ -12,22 +11,37 @@ function InputForm() {
   const [age, setAge] = useState('')
   const [textarea, setTextarea] = useState('')
   const [img, setImg] = useState(null)
+
+  const [allData, setAllData] = useState(
+    JSON.parse(localStorage.getItem('teachers')) || []
+  )
+
   const handleFormSubmit = (e) => {
     e.preventDefault()
 
-    const data = {
+    const newTeacher = {
       FullName: fullName.trim(),
       Subject: subject.trim(),
       Class: className.trim(),
       Email: email.trim(),
       Gender: gender.trim(),
-      age: age.trim(),
-      textarea: textarea.trim(),
-      img: img,
+      Age: age.trim(),
+      About: textarea.trim(),
+      Img: img,
     }
-    AllData.push(data)
 
-    localStorage.setItem('teachers', JSON.stringify(AllData))
+    const updatedData = [...allData, newTeacher]
+    setAllData(updatedData)
+
+    localStorage.setItem('teachers', JSON.stringify(updatedData))
+    setFullName('')
+    setClassName('')
+    setEmail('')
+    setGender('')
+    setSubject('')
+    setAge('')
+    setTextarea('')
+    setImg(null)
   }
 
   const handleInputChange = (setter) => (e) => setter(e.target.value)
@@ -66,7 +80,7 @@ function InputForm() {
                 placeholder={'Class'}
                 name={'Class'}
                 value={className}
-                SetState= {setClassName}
+                SetState={setClassName}
                 extraStyle={'w-[407px] mb-[36px]'}
               />
             </div>
