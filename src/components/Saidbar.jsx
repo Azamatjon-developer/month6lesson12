@@ -10,7 +10,7 @@ import { Outlet } from 'react-router-dom'
 import { LogoIcon } from '../assets/images/Icons'
 function Saidbar() {
   return (
-    <div className="w-[20%]    bg-[#152259] ">
+    <div className="w-[20%] fixed top-0 left-0 bottom-0 h-full    bg-[#152259] ">
       <div className="w-[100%]   text-[white]">
         <div className="mt-[26px] pb-[27px] ">
           <span className='block w-[65px] mx-auto'><LogoIcon/></span>

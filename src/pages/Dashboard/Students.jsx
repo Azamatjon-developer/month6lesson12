@@ -1,9 +1,8 @@
 import React from 'react'
-import Saidbar from '../../components/Saidbar'
 
 function Students() {
   return (
-    <div>
+    <div className="">
       <h2>Students</h2>
     </div>
   )

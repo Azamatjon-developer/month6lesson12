@@ -1,17 +1,19 @@
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Context } from './Context/Context'
 import {
-  Billing,
   Dashboard,
+  Billing,
   Exams,
   Features,
   Settings,
   Students,
-  Teachers
+  Teachers,
+  AboutTeachers,
 } from './pages/Dashboard'
+
 import InputForm from './pages/Dashboard/InputForm'
 
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import { SignIn, SignUp } from './pages/Login'
 import './App.css'
 import Header from './components/Header'
@@ -19,11 +21,24 @@ import Saidbar from './components/Saidbar'
 
 function App() {
   const { token } = useContext(Context)
+  const [showsidebar, setShowSidebar] = useState(false)
+
+  const { pathname } = useLocation()
+  useEffect(() => {
+    if (pathname.includes('/sign-up') || pathname.includes('/login')) {
+      setShowSidebar(true)
+    } else {
+      setShowSidebar(false)
+    }
+  }, [])
+
   return (
-    <div className='flex'>
-        <Saidbar/>
-      <div className='w-[80%]'>
-          <Header/>
+    <div className="flex">
+      <div className={`flex  ${showsidebar ? 'hidden' : ''}`}>
+        <Saidbar className={`w-[20%]`} />
+      </div>
+      <div className={` ml-[20%] w-[80%] ${ showsidebar ? "w-full" : ""}`}>
+        <Header />
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/login" element={<SignIn />} />
@@ -34,10 +49,10 @@ function App() {
           <Route path="/settings" element={<Settings />} />
           <Route path="/exams" element={<Exams />} />
           <Route path="/features" element={<Features />} />
-          <Route path='/inputform' element={<InputForm/>} />
+          <Route path="/inputform" element={<InputForm />} />
+          <Route path="/about-teachers" element={<AboutTeachers />} />
         </Routes>
       </div>
-    
     </div>
   )
 }

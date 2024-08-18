@@ -1,6 +1,6 @@
-import { Link, useNavigate } from 'react-router-dom' // useParams olib tashlandi
+import { useNavigate } from 'react-router-dom' 
 import { Input } from '../../components/Input'
-import React, { useEffect } from 'react'
+import React from 'react'
 import Button from '../../components/Button'
 import { useContext } from 'react'
 import { Context } from '../../Context/Context'
@@ -16,7 +16,7 @@ function SignUp() {
       password: e.target.password.value,
     }
 
-    if (data.login == 'Azamat' && data.password == '123') {
+    if (data.login === 'Azamat' && data.password === '123') {
       setToken(data)
       navigate('/')
     } else {
@@ -26,36 +26,40 @@ function SignUp() {
 
   return (
     <div>
-      <div className="flex justify-center mt-[100px] text-[36px] text-[#4F4F4F] font-kumbh font-semibold">
-        <h2 className="text-center">Welcome, Sign up </h2>
+      <div className="flex justify-center mt-[60px] text-[36px] text-[#4F4F4F] font-kumbh font-semibold">
+        <h2 className="text-center">Welcome, Sign up</h2>
       </div>
       <div className="flex flex-col items-center">
-        <p className="mt-[100px] text-[#667085] font-kumbh font-medium">
-          It is our great pleasure to have you on board!{' '}
+        <p className="mt-[60px] text-[#667085] font-kumbh font-medium">
+          It is our great pleasure to have you on board!
         </p>
-        <form onSubmit={handleSubmitSignUp}>
+        <form onSubmit={handleSubmitSignUp} className="w-full max-w-[400px]">
           <Input
             isRequired={true}
             placeholder="Enter your Email"
             type="email"
             name="email"
-            extraStyle="mb-[14px]"
+            extraStyle="mb-[14px] w-full"
           />
           <Input
             isRequired={true}
             placeholder="Create your Login"
             type="text"
             name="login"
-            extraStyle="mb-[14px]"
+            extraStyle="mb-[14px] w-full"
           />
           <Input
             isRequired={true}
             placeholder="Enter your password"
             type="password"
             name="password"
-            extraStyle="mb-[14px]"
+            extraStyle="mb-[14px] w-full"
           />
-          <Button title={'Sign up'} type={'submit'} extraClass={'mb-[100px] pt-[11px] pl-[95px] pr-[95px] pb-[11px] text-[14px] font-kumbh font-bold'} />{' '}
+          <Button 
+            title={'Sign up'} 
+            type={'submit'} 
+            extraClass={'mt-[20px] w-full text-[14px] font-kumbh font-bold py-[11px]'} 
+          />
         </form>
       </div>
     </div>

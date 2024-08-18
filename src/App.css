@@ -46,3 +46,6 @@
 .active{
     color:rgb(80, 12, 207);
 }
+
+::-webkit-scrollbar {
+    display: none;}
