@@ -10,18 +10,18 @@ function Teachers() {
   const TeachersMap = TeachersData?.map((teacher, index) => (
     <tr>
       <Link to={'/about-teachers'} element={<AboutTeachers />}>
-        <td className="w-[180px] pt-[20px]">{teacher.FullName}</td>
+        <td className="w-[180px] ">{teacher.FullName}</td> 
       </Link>
-      <td className="w-[180px] h-[48px] pt-[20px] pl-[30px] border-[1px] border-slate-500">
+      <td className="w-[180px] h-[48px] text-center pb-3">
         {teacher.Class}
       </td>
-      <td className="w-[180px] h-[48px] pt-3 pl-[30px]  border-[1px] border-slate-500 text-center pb-3">
+      <td className="w-[180px] h-[48px] text-center pb-3">
         {teacher.Subject}
       </td>
-      <td className="w-[180px] h-[48px] pt-3 pl-[30px]  border-[1px] border-slate-500 text-center pb-3">
+      <td className="w-[180px] h-[48px] text-center pb-3">
         {teacher.Email}
       </td>
-      <td className="w-[180px] h-[48px] pt-3 pl-[30px]  border-[1px] border-slate-500 text-center pb-3">
+      <td className="w-[180px] h-[48px] text-center pb-3">
         {teacher.Gender}
       </td>
     </tr>
@@ -52,7 +52,7 @@ function Teachers() {
             </div>
             {TeachersData.length ? (
               <table className="">
-                <thead className="border-[1px] border-slate-500">
+                <thead className="">
                   <tr className="w-[180px] ">
                     <th className="w-[180px] border-[1px] border-slate-500 pt-[16px] pb-[16px]">
                       Name
@@ -73,7 +73,7 @@ function Teachers() {
                     </th>
                   </tr>
                 </thead>
-                <tbody className='border-[1px] border-slate-500'>{TeachersMap}</tbody>
+                <tbody className=''>{TeachersMap}</tbody>
               </table>
             ) : (
               <img className="m-auto " src={NoTeachers} alt="NoTeachers" />

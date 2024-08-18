@@ -32,7 +32,7 @@ function SignIn(e) {
           It is our great pleasure to have you on board!
         </p>
 
-        <form onSubmit={handleSubmit} className="w-[512px] text-center">
+        <form onSubmit={handleSubmit} className="w-[512px] text-center ">
           <Input
             isRequired={true}
             placeholder="Enter your Login"

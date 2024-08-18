@@ -12,7 +12,7 @@ function Header() {
     <div className='flex items-center w-full justify-end pr-[30px] py-[20px] bg-white z-50'> 
       <div className="flex items-center gap-2">
         <img src={Remind} alt="remind" />
-        <button className='pt-[12px] pb-[12px] pr-[35px] pl-[35px] border-[0.1px] font-kumbh font-semibold text-[14px] border-slate-500'>
+        <button className='pt-[12px] pb-[12px] pr-[35px] pl-[35px]  font-kumbh font-semibold text-[14px] border-slate-500'>
           Log out
         </button>
       </div>

@@ -7,8 +7,8 @@ function InputForm() {
   const [fullName, setFullName] = useState('')
   const [className, setClassName] = useState('')
   const [email, setEmail] = useState('')
-  const [subject, setSubject] = useState('')
   const [gender, setGender] = useState('')
+  const [subject, setSubject] = useState('')
   const [age, setAge] = useState('')
   const [textarea, setTextarea] = useState('')
   const [img, setImg] = useState(null)
@@ -125,8 +125,9 @@ function InputForm() {
               className="w-[406px] h-[172px] p-[20px]"
               placeholder="About"
               name="textarea"
+              id="textarea"
               value={textarea}
-              SetState={setTextarea}
+              onChange={(e) => setTextarea(e.target.value)}
             ></textarea>
             <Input
               type={'file'}
